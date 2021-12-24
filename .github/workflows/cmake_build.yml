@@ -55,7 +55,7 @@ jobs:
           os: macos-11
           arch: Intel
           vcpkg_triplet: x64-osx-10.12min
-          CMAKE_GENERATOR: Unix Makefiles
+          CMAKE_GENERATOR: Ninja
 
         # - name: macOS - Catalina 10.15 (Intel) - Ninja
         #   id: macos-catalina-1015-intel-x64_osx_1012min-ninja
@@ -101,7 +101,7 @@ jobs:
 
       # CMake settings
       CMAKE_BUILD_TYPE: MinSizeRel
-      CMAKE_GENERATOR: ${{matrix.config.CMAKE_GENERATOR}}
+      # CMAKE_GENERATOR: ${{matrix.config.CMAKE_GENERATOR}}
       CMAKE_GENERATOR_PLATFORM: ${{matrix.config.CMAKE_GENERATOR_PLATFORM}}
 
       # vcpkg settings
